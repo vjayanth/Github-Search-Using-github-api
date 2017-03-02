@@ -13,3 +13,4 @@ steps to follow to run in the local host
 1. clone the repo from git hub.
 2. Get inside the Directory using command line and run npm install.
 3. Run node serverapp.js to start the server.
+4. App will be running at localhost:3000.
