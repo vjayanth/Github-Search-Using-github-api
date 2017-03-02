@@ -6,7 +6,7 @@ This is an example about how to build a small SPA with AngularJS that consume th
 This Repository uses http://julitogtu.com and made some changes in the code to show 
 contributor image and follow the contributor.
 
-**To follow the contributor one must place Github Client-Id in serverapp.js file 
+**To follow the contributor using project one must place Github Client-Id in serverapp.js file 
 
 steps to follow to run in the local host 
 
