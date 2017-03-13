@@ -6,7 +6,7 @@ This is an example about how to build a small SPA with AngularJS that consume th
 This Repository uses http://julitogtu.com and made some changes in the code to show 
 contributor image and follow the contributor.
 
-**To run the code in local host first step is to keep the github personal token in node serverapp.js file otherwise you will see the below error after running node serverapp.js
+**To run the code in local host first step is to keep the github personal token in node serverapp.js file otherwise you will see the below error after running node serverapp.js after cloning the repo.
 
 Error:
 
@@ -26,8 +26,8 @@ Error: OAuth2 authentication requires a token or key & secret to be set
 
 
 steps to follow to run in the local host 
-1. paste github personal access token in serverapp.js
-2. clone the repo from git hub.
-3. Get inside the Directory using command line and run npm install.
+1. clone the repo from git hub.
+2. Get inside the Directory using command line and run npm install.
+3. paste github personal access token in serverapp.js
 4. Run node serverapp.js to start the server.
 5. App will be running at localhost:3000.
