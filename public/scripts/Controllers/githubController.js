@@ -31,23 +31,12 @@
                         .then(onSearchComplete, onError);
         };
 
-        scope.userDetails = function (username) {
-            location.path("/user/" + username);
+        scope.repoContributors = function (user,repo) {
+            console.log(user,repo);
+            location.path("/contributors/" + user+'/'+repo);
         };
 
-        scope.follow=function(username,id){
-            var postObj={"username":username}
-            githubService
-                        .followUser(postObj)
-                        .then(function(response){
-                            if(response == 'success'){
-                               var index= scope.list.findIndex(x => x.id==id);
-                                scope.list[index].follow =true;
-                            }
-                        },function(error){
-                            console.log(error);
-                        })
-        }
+       
         scope.topic = "";
         scope.username = "";
         scope.order = "+owner.login";

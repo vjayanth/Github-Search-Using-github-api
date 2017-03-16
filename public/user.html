@@ -1,14 +1,12 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-            <div class="well profile">
+        <div class=" col-md-8  col-lg-12">
+            <div class="well profile" ng-repeat="user in contributors">
                 <div class="col-sm-12">
                     <div class="col-xs-12 col-sm-8">
-                        <h2>{{user.name}}</h2>
-                        <p><strong>Location: </strong> {{user.location}} </p>
-                        <p><strong>Email: </strong> {{user.email}} </p>
-                        <p><strong>Blog: </strong> <a ng-href="http://{{user.blog}}" target="_blank">http://{{user.blog}}</a> </p>
-                        <p><strong>Company: </strong> {{user.company}} </p>
+                        <h2>{{user.login}}</h2>
+                        <p><strong>Contributions: </strong> {{user.contributions}} </p>
+                        <p><strong>Id: </strong> {{user.id}} </p>
                     </div>
                     <div class="col-xs-12 col-sm-4 text-center">
                         <figure>
@@ -19,25 +17,10 @@
                 </div>
                 <div class="col-xs-12 divider text-center">
                     <div class="col-xs-12 col-sm-4 emphasis">
-                        <h2><strong> {{user.followers}} </strong></h2>
-                        <p><small></small></p>
-                        <button class="btn btn-success btn-block"><span class="fa fa-user"></span> Followers </button>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 emphasis">
-                        <h2><strong>{{user.following}}</strong></h2>
-                        <p><small></small></p>
-                        <button class="btn btn-success btn-block"><span class="fa fa-user"></span> Following </button>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 emphasis">
-                        <h2><strong>{{user.public_repos}}</strong></h2>
-                        <p><small></small></p>
-                        <button class="btn btn-success btn-block"><span class="fa fa-user"></span> Repositories </button>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="col-xs-12 col-sm-8">
-                        <br>
-                        <a href="#/search">New search</a>
+                        <!-- <h2><strong> {{user.followers}} </strong></h2>
+                        <p><small></small></p> -->
+                        <button class="btn btn-success btn-block" ng-click="followContributor(user.login,user.id)" ng-hide="user.follow"><span class="fa fa-user"></span> Follow</button>
+                         <button class="btn btn-success btn-block" ng-click="followContributor(user.login,user.id)" ng-show="user.follow"><span class="fa fa-user"></span> Following</button>
                     </div>
                 </div>
             </div>

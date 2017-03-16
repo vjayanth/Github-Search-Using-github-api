@@ -5,8 +5,9 @@ body
 }
 .profile
 {
-    min-height: 355px;
+    min-height: 210px;
     display: inline-block;
+    border :1px solid #2b3e50;
 }
 figcaption.ratings
 {

@@ -14,7 +14,7 @@ var github = new GitHubApi();
 
 github.authenticate({
     type: "oauth",
-    token:""   // Github Token should be paste here for authentication to follow and unfollow the user
+    token:"6daf23a63b8e87ac9feedf047b8f9cd80d6a224d"   // Github Token should be paste here for authentication to follow and unfollow the user
 });
 
 

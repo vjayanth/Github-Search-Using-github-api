@@ -12,7 +12,7 @@
                 templateUrl: "/public/search.html",
                 controller: "githubController"
             })
-            .when("/user/:username", {
+            .when("/contributors/:name/:repo", {
                 templateUrl: "/public/user.html",
                 controller: "githubUserController"
             })

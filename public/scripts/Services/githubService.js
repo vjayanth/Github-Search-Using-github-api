@@ -20,6 +20,14 @@
                 });
         };
 
+        var getContributors=function(contributorsParams){
+            return http.get("https://api.github.com/repos/" + contributorsParams.name+'/'+contributorsParams.repo+'/contributors')
+                .then(function(response){
+                    return response.data;
+                });
+
+        }
+
         var followUser = function(postObj)
         {
             return http.post("/followUser", postObj)
@@ -30,7 +38,8 @@
         return {
             getResult: getResult,
             getUser: getUser,
-            followUser:followUser
+            followUser:followUser,
+            getContributors:getContributors
         };
 
     };

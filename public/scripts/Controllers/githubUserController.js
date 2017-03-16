@@ -7,17 +7,30 @@
 
         var onUserComplete = function(data)
         {
-            scope.user = data;
-        };
+            scope.contributors=data;    
+             };
 
         var onError = function(err) {
             log.info(err);
         };
+         scope.followContributor=function(username,id){
+            var postObj={"username":username}
+            githubService
+                        .followUser(postObj)
+                        .then(function(response){
+                            if(response == 'success'){
+                               var index= scope.contributors.findIndex(x => x.id==id);
+                                scope.contributors[index].follow =true;
+                            }
+                        },function(error){
+                            console.log(error);
+                        })
+        }
 
-        scope.username = routeParams.username;
-        githubService
-                .getUser(scope.username)
-                .then(onUserComplete, onError);
+        scope.contributorsparams = routeParams;
+         githubService
+                 .getContributors(scope.contributorsparams)
+               .then(onUserComplete, onError);
     };
 
     githubUserController.$inject = ['$scope','$log','$location','$routeParams','githubService'];
